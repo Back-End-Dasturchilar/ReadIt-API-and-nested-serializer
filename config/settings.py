@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # built in apps
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
     # local apps
     'blog',
     'contact'

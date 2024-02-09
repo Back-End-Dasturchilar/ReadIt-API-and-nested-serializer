@@ -40,6 +40,19 @@ class PostAPIView(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+    def get_queryset(self):
+        tag = self.request.query_params.get('tag')
+        category = self.request.query_params.get('cat')
+        q = self.request.query_params.get('q')
+        if q:
+            return Post.objects.filter(title__icontains=q)
+        if tag:
+            return Post.objects.filter(tags__name__icontains=tag)
+        if category:
+            return Post.objects.filter(category__name__icontains=category)
+        else:
+            return Post.objects.all()
+
 
 class AboutAPIView(generics.ListAPIView):
     queryset = About.objects.all()
