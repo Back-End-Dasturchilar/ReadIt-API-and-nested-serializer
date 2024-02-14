@@ -1,19 +1,8 @@
-from rest_framework import generics, viewsets
-from .models import (Category,
-                     Comment,
-                     Post,
-                     HappyClients,
-                     Author,
-                     About,
-                     Tag)
+from rest_framework import generics
+from .models import Category, Comment, Post, HappyClients, Author, About, Tag
 
-from .serializers import (AuthorSerializer,
-                          AboutSerializer,
-                          CategorySerializer,
-                          CommentSerializer,
-                          HappyClientsSerializer,
-                          PostSerializer,
-                          TagSerializer)
+from .serializers import AuthorSerializer, AboutSerializer, CategorySerializer, CommentSerializer, \
+    HappyClientsSerializer, PostSerializer, TagSerializer
 
 
 class AuthorAPIView(generics.ListAPIView):

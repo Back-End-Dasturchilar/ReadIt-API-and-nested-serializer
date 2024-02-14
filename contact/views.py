@@ -11,4 +11,3 @@ class ContactAPIView(generics.CreateAPIView):
 class ContactInfoAPIView(generics.ListAPIView):
     queryset = ContactInfo.objects.all()[:1]
     serializer_class = ContactInfoSerializer
-

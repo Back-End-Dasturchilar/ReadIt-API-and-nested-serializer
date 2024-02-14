@@ -22,15 +22,14 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-...
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Redit API",
+      title="Instagram API",
       default_version='v2',
       description="Test description",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="aboqijonov12@gmail.com"),
+      terms_of_service="https://www.instagram.com/",
+      contact=openapi.Contact(email="xurshidst2006@gmail.com"),
       license=openapi.License(name="MIT License"),
    ),
    public=True,

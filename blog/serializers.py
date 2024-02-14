@@ -1,11 +1,5 @@
 from rest_framework import serializers
-from .models import (Author,
-                     About,
-                     Category,
-                     Comment,
-                     Post,
-                     HappyClients,
-                     Tag)
+from .models import Author, About, Category, Comment, Post, HappyClients, Tag
 
 
 class AuthorSerializer(serializers.ModelSerializer):

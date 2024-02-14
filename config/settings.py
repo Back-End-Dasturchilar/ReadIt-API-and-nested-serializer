@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q582_pv6r=czt1ty5r5uc_^vc*&m2j%no#nmfki2!%bm9&ngjc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -37,11 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # built in apps
     'rest_framework',
     'corsheaders',
     'drf_yasg',
-    # local apps
     'blog',
     'contact'
 ]
